@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Error Boundary Demo</title>
+</head>
+<body>
+    <h2>JSX Syntax Demos...</h2>   <div id="root"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+    <script type="text/babel">    
+
+        class ErrorBoundary extends React.Component 
+    {       constructor(props) 
+    {    
+    super(props);   
+    this.state = { error: null, errorInfo: null };   
+    }       componentDidCatch(error, errorInfo) { 
+    // Catch errors in any components below and re-render with error message     
+    this.setState({           error: error,           errorInfo: errorInfo         })         // You can also log error messages to an error reporting service here       }        render() {         if (this.state.errorInfo) {           // Error path           return (             <div>               <h2>Something went wrong...</h2>               <details style={{ whiteSpace: 'pre-wrap' }}>                 {this.state.error && this.state.error.toString()}                 <br />
