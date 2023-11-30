@@ -1,0 +1,18 @@
+Determine the output of the given code snippet.
+
+String s1="1";
+Integer i=Integer.parseInt(s1);
+Float s=Float.valueOf(i.intValue()); //line 3
+System.out.println(f);
+
+a. 1
+b. 1.0
+c. Compilation error at line 3 due to Float.valueOf()
+d. Compilation error at line 3 due to i.intValue()
+b. 1.0
+You are implementing lambda expressions to sort a sequence of roll numbers of students on a Java application developed for a university. Which of the following lambda expressions will you use for sorting thrm in descending order?
+a. rollNumberList.sort((Integer roll1, Integer roll2) -> - roll1.compareTo(roll2));
+b. rollNumberList.sort(Integer roll1, Integer roll2 -> roll2.compareTo(roll2));
+c. rollNumberList.sort((roll1, roll2) -> {-roll1.compareTo(roll2)});
+d. rollNumberList.sort((int roll1, int roll2) -> {-roll1.compareTo(roll2)});
+a. rollNumberList.sort((Integer roll1, Integer roll2) -> - roll1.compareTo(roll2))
