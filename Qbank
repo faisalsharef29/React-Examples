@@ -16,3 +16,845 @@ b. rollNumberList.sort(Integer roll1, Integer roll2 -> roll2.compareTo(roll2));
 c. rollNumberList.sort((roll1, roll2) -> {-roll1.compareTo(roll2)});
 d. rollNumberList.sort((int roll1, int roll2) -> {-roll1.compareTo(roll2)});
 a. rollNumberList.sort((Integer roll1, Integer roll2) -> - roll1.compareTo(roll2))
+
+Determine the output of the given code snippet.
+
+String s1="1";
+Integer i=Integer.parseInt(s1);
+Float s=Float.valueOf(i.intValue()); //line 3
+System.out.println(f);
+
+a. 1
+b. 1.0
+c. Compilation error at line 3 due to Float.valueOf()
+d. Compilation error at line 3 due to i.intValue()
+b. 1.0
+You are implementing lambda expressions to sort a sequence of roll numbers of students on a Java application developed for a university. Which of the following lambda expressions will you use for sorting thrm in descending order?
+a. rollNumberList.sort((Integer roll1, Integer roll2) -> - roll1.compareTo(roll2));
+b. rollNumberList.sort(Integer roll1, Integer roll2 -> roll2.compareTo(roll2));
+c. rollNumberList.sort((roll1, roll2) -> {-roll1.compareTo(roll2)});
+d. rollNumberList.sort((int roll1, int roll2) -> {-roll1.compareTo(roll2)});
+a. rollNumberList.sort((Integer roll1, Integer roll2) -> - roll1.compareTo(roll2));
+Consider the following statement about a thread pool:
+
+A thread pool that creates many threads needs to execute the task in parallel
+
+Which of the following thread pool is described by the above statement?
+
+a. fixed thread pool
+b. Scheduled Thread Pool
+c. Cached Thread Pool
+d. None of these
+c. Cached Thread Pool
+You have been asked to establshish a connection to a MySql database in the "localhost" called "college". You are given the password as "pass" and the user name as "admin".
+
+Which of the following connection URLs / arguments can be passed to getConnection method of DriverManager?
+
+a."jdbc:mysql://localhost:3306/college?" + "usersadmin&password=pass"
+b."jdbc:mysql://localhost:3306usersadmin&password=pass"
+c."jdbc:mysql://localhost:3306/college"."pass""admin"
+d."jdbc:mysql://college:3306/localhost?usersadmin&password=pass"
+a."jdbc:mysql://localhost:3306/college?" + "usersadmin&password=pass"
+Which of these methods returns description of an exception?
+
+a. getException()
+b. getMessage()
+c. obtainDescription()
+d. obtainException()
+b. getMessage()
+Given a valid DateFormat object named ds:
+
+16. Date d = new Date(0L);
+17. String df = "December 15, 2004";
+18// insert code here
+
+NOTE: in the answers, df and ds should be switched because the String object does not have a parse() or getDate() method. They are under the DateFormat object.
+
+a. 18. d = df.parse(ds);
+b. 18. d = df.getDate(ds);
+c. 18. try {
+19. d - df.parse(ds);
+20. } catch(ParseException e) {};
+d. 18. try {
+19. d - df.getDate(ds);
+20. } catch(ParseException e) {};
+c. 18. try {
+19. d - df.parse(ds);
+20. } catch(ParseException e) {};
+Consider the scenario that one Thread is iterating over a collection object and another thread is structurally modifying the collection by adding objects on the underlying collection. As a result, it is throwing ConcurrentModificationException. For some reason, you don't want the program to throw an exception in the above scenario. which of the following must be done?
+
+a. use fail-fast iterator
+b. use fail-safe iterator
+c. use enumeration
+d. None of the mentioned
+b. use fail-safe iterator
+Suppose there is an Employee class which contains id and name of the employees. You have added Employee class objects to an ArrayList. Now you want to sort the objects in the AttayList according to the id attribute present in Employee class. Identify the steps need to be taken in the correct order.
+
+1. Implement the Comparable interface in the Employee class.
+2. Implement the Comparator interface in the Employee class.
+3. Override the compareTo method as:
+int compareTo(Employee e) { return this.id - e.id;}
+4. Call sort method of Collections class and pass the list as an argument, that is, Collections.sort(empList)
+
+a. 1, 4
+b. 2, 4
+c. 1, 3, 4
+d. 2, 3, 4
+c. 1, 3, 4
+In order to send a file using the REST web service, what is the header parameter xxxxx that needs to be configured?
+
+ResponseBuilder response = Response.ok((Object) file);
+response.header("xxxxx","attachment; filename=\"mytextfile.txt\");
+return response.build();
+
+a. File
+b. Content-Disposition
+c. Content-Type
+d. File-Disposition
+b. Content-Disposition
+You are asked to develop a REST web service to fetch all the order numbers. Which of the following JAXRS annotations is used to annotate a method that is used to fetch a resource?
+
+a. @GET
+b. @PUT
+c. @POST
+d. @HEAD
+a. @GET
+A client for a RESTful web service has the ability to place requests with and accept only XML encoding; which of the following will help support this client?
+
+a. @Consumes('text/plain')
+public String getOrder() {...}
+b. @Consumes('text/xml')
+public String getOrder() {...}
+c. @Consumes('application/octat-stream')
+public String getOrder() {...}
+d. @Consumes('text/utf-8')
+public String getOrder() {...}
+b. @Consumes('text/xml')
+public String getOrder() {...}
+You are creating an application that has s servlet that connects to Enterprise JavaBean containers. What is the earliest point in the lifecycle in which such a connection can be established?
+
+a. During triggering of static initialization methods
+b. After triggering of static initialization methods
+c. After calling of init method
+d. After a request is received
+d. After a request is received
+How will you leverage the server push HTTP/2 enhancement in a JSF page so that it can gain the performance benefits associated?
+
+a. By using the JavaServer Faces API
+b. By implmenting the appropriate interface
+c. It is auto invoked in the RenderResponePhase lifecycle phase
+d. None of the above
+a. By using the JavaServer Faces API
+Which annotation is used to link two tables through a relation table?
+
+a. @RelationTable
+b. @JoinTable
+c. @LinkTable
+d. @Inheritance
+b. @JoinTable
+What is the correct lifecycle of TDD?
+
+a. Write test -> Run->Refactor->Repeat
+b. Run->Refactor->Repeat->Write Test
+c. Refactor->Repeat->Write Test->Run
+d. Run Code->Write Test->Refactor->Repeat
+a. Write Test-> Run->Refactor->Repeat
+Which of these is not a concurrency strategy for second level caching?
+
+a. Transactional
+b. Read-write
+c. Read-Only
+d. Write-Only
+d. Write-Only
+You want to enable sidecar for a spring microservice based application that is to be connected to a eureka server. You have created a @Bean of type DiscoveryClientOptionalArgs to do so. In the given scenario which of these types of instances need to be injected into this bean?
+
+a. ClientContext
+b. ClientFilter
+c. BeanFilter
+d. TrustedContext
+b. ClientFilter
+Given below is a list of beans as scopes:
+
+1. Singleton
+2. Prototype
+3. Request
+4. Session
+5. Global Session
+
+Which of the following is true for the Spring IOC container?
+
+a. Only 1 is there in Spring IoC
+b. Only 1 and 2 are there in the Spring IoC
+c. Only 1, 2 and 3 are there in the Spring IoC
+d. All are there in Spring IoC
+b. Only 1 and 2 are there is Spring IoC
+You want to be able to create an aspect instance for each unique target object in the matching join points. Select the appropriate clause used to attain such a result in your AspectJ instantiation model.
+
+a. perthis
+b. perthat
+c. pertarget
+d. All of these
+pertarget
+A bean hosted by the IoC container can have one or more identifiers which are considered aliases.
+
+Suppose there is a requirement for a bean to have more than one identifier, how will you introduce these other aliases to the bean
+
+Note: There can be multiple correct answers to this question
+
+a. Specify them in name attribute, separated by a comma
+b. Specify them in id attribute, separated by a comma
+c. Specify them in name attribute, separated by a semicolon
+d. Specify them in id attribute, separated by a white space
+a. Specify them in name attribute, separated by a comma
+c. Specify them in name attribute, separated by a semicolon
+Given the table below: (NOT PRESENT)
+
+There is a foreign key relationship between the RestaurantID columns of the Restaurant and Visits Tables.
+There is a foreign key relationship between the UserId column of the Users and Visits Table.
+
+You have written the query below in order to get the list of names of users that are from the USA and titles of restaurants they visited, which have a rating of 5.
+
+SELECT users.name, restaurants.title
+FROM users
+JOIN visits
+XXXX
+JOIN restaurants
+YYYY
+WHERE restaurants.rating = 5
+AND users.country = 'USA'
+
+How will you replace XXXX and YYYY so that the query will produce the required output with no error?
+
+a. XXXX - ON visits.userid = users.userid
+YYYY - ON restaurants.restaurantid = visits.restaurantid
+
+b. XXXX - ON visits.visitid = users.userid
+YYYY - ON restaurants.restaurantid = visits.restaurantid
+
+c. XXXX - ON visits.userid = users.userid
+YYYY - ON restaurants.restaurantid =users.visitid
+
+d. XXXX - ON visits.visitid = users.userid
+YYYY - ON restaurants.restaurantid = users.visitid
+a. XXXX - ON visits.userid = users.userid
+YYYY - ON restaurants.restaurantid = visits.restaurantid
+According to the given tables, what is the result if the following SQL query?
+
+There is a foreign key relationship between the 'id' columns of the sales and customer tables.
+
+SELECT *
+FROM Customer c LEFT OUTER JOIN Sales s
+ON c.id = s.id
+
+Customer table:
+ID | Full name
+____|_________________________
+1 | Kristine Wright
+2 | William Nunez
+3 | Nicholas Ryan
+4 | Michael Gallagher
+
+Sales table:
+ID | Sold | Price
+____|___________________________|_________
+1 | Fridge | 1200
+2 | LCD TV | 1800
+5 | LCD TV | 1750
+8 | Washing Machine | 950
+
+a. id full_name sold price
+1 Nicholas Ryan Fridge 1200
+2 Michael Gallagher LCD TV 1800
+3 Kristine Wright
+4 William Nunez
+
+b. id full_name sold price
+1 Kristine Wright W. Machine 950
+2 William Nunez LCD TV 1750
+3 Nicholas Ryan
+4 Michael Gallagher
+
+c. id full_name sold price
+1 Kristine Wright Fridge 1200
+2 William Nunez LCD TV 1800
+
+d. id full_name sold price
+1 Kristine Wright Fridge 1200
+2 William Nunez LCD TV 1800
+3 Nicholas Ryan
+4 Michael Gallagher
+d. id full_name sold price
+1 Kristine Wright Fridge 1200
+2 William Nunez LCD TV 1800
+3 Nicholas Ryan
+4 Michael Gallagher
+When does the message "No Suitable Driver" occur?
+
+a. When the driver is not registered by Class.forname() method
+b. When the user name, password and database do not match
+c. When the JDBC database URL passed is not constructed properly
+d. When the type 4 driver is used
+c. When the JDBC database URL passed is not constructed properly
+The class java.sql.Timetamp has its super class as:
+
+a. java.sql.Time
+b. java.util.Date
+c. java.util.Time
+d. None of the mentioned
+b. java.util.Date
+Session session = factory.openSession();
+session.beginTransaction();
+EmployeeVehicle entity = (EmployeeVehicle) session.get(EmployeeVehicle.class, 36);
+session.close();
+
+Session session2 = factory.openSession();
+session2.beginTransaction();
+entity.setVehicleName("Toyota");
+session2.persist(entity);
+session2.getTransaction().commit();
+session2.close();
+
+What happens after the above code is executed?
+
+a. Exception being thrown: detached entity passed to persist
+b. Exception being thrown: org.hibernate.SessionException: Session is closed!
+c. Entity is persisted
+d. NullPointerException
+a. Exception being thrown: detached entity passed to persist
+<hibernate-configuration>
+<session-factory>
+<property name="hbm2dll.auto">create</property>
+</session-factory>
+</hibernate-configuration>
+
+What will the above configuration do?
+
+a. Create tables automatically
+b. Create session object automatically
+c. Create Session Factory object automatically
+d. None of the options
+a. Create tables automatically
+Consider the following code snippet.
+
+@Controller
+public class SimpleController {
+
+@RequestMapping("/welcome")
+ModelAndView handleIncomingWelcomeReq() {
+
+ModelAndView mw = new ModelAndView("WelcomePage", "welcomeKey", "WelcomeKey's value!");
+
+return mw;
+}
+}
+
+Which of the following is/are true about this code snippet?
+
+a. The @Controller annotation exposes a web-application, but if replaced we @RestController will expose a Rest-Service without further modifying the rest of the code snippet.
+
+b. @RestController should be used instead of the @Controller since @Controller does not scan views.
+
+c. Using either @RestController or @Controller annotation does not impact the current application since @RestController contains both @Controller and @ResponseBody annotations.
+
+d. the current code snippet is good since it uses @Controller spring annotation to scan views and expose a web application.
+d. the current code snippet is good since it uses @Controller spring annotation to scan views and expose a web application.
+You typically run in an Amazon AWS cloud along with a large number of middle-tier services that are not registered in Amazon ELB. You want to build a Spring boot microservice that leverages a Eureka server to balance the load.
+Which of the following values accurately represent A in the given scenario for configuring custom properties of the Eureka server in the snippet shown below?
+
+setProperty(A, Object)
+
+a. IClientConfigKey
+b. ServerListFilter<Server>
+c. ServerList<Server>
+d. RibbonConfig
+a. IClientConfigKey
+Which of the following us a fixed version of the below code snippet?
+(Assume using Angular 4)
+
+<div class="products">
+<ul>
+<li *ngFor="let x of items" [HIDDEN]="!products">
+<a href="{{x.href}}">
+{{x.name}}
+</a>
+</li>
+</ul>
+</div>
+-----------------------------------------------------------------------------
+a.
+<div class="products">
+<ul *ngif="!products">
+<li *ngFor="let x of items">
+<a href="{{x.href}}">
+{{x.name}}
+</a>
+</li>
+</ul>
+</div>
+
+b.
+<div class="products">
+<ul !ngif="products">
+<li *ngFor="let x of items">
+<a href="{{x.href}}">
+{{x.name}}
+</a>
+</li>
+</ul>
+</div>
+
+c.
+<div class="products">
+<ul>
+<li ngFor="let x of items" [HIDDEN]="!products">
+<a href="{{x.href}}">
+{{x.name}}
+</a>
+</li>
+</ul>
+</div>
+
+d. The code snippet has no issues and would work perfectly fine
+a.
+<div class="products">
+<ul *ngif="!products">
+<li *ngFor="let x of items">
+<a href="{{x.href}}">
+{{x.name}}
+</a>
+</li>
+</ul>
+</div>
+How do you add animations to NgModule in Angular 4?
+
+a. By importing AnimationsModule from @angular/platform-browse/animations
+b. By importing BrowserAnimationsModule from @angular/platform-browse/animations
+c. By importing AnimationsModule from @angular/angular-core/animations
+d. By importing BrowserAnimationsModule from @angular/angular-core/animations
+b. By importing BrowserAnimationsModule from @angular/platform-browse/animations
+You are bootstrapping your Angular 4 application in main.ts. You have already started the bootstrapping process, and the root AppComponent has been dug out of the module's bootstrap array.
+
+If you want an instance of the component to be component to be created and inserted within an element tag, which of these choices will you use to identify the tag?
+
+a. Bootstrap array
+b. AppComponent identifier
+c. Appcomponent selector
+d. Just-In-Time compiler
+c. Appcomponent selector
+Consider the given code:
+
+let myLogger = { logs: ['my logger is "great!".Provided via "useValue"'],log: () => {} };
+
+You have created an object in the shape of the logger service. How will you register the provider with the useValue option so that the object can play the roll of logger?
+
+a. [ { provide: Logger, useValue: myLogger } ]
+b. [ { provide: myLogger, useValue: Logger } ]
+c. [ { provide: Logger, useValue: great } ]
+d. [ { provide: object, useValue: Logger } ]
+a. [ { provide: LoggerService, useValue: myLogger } ]
+a. [ { provide: Logger, useValue: myLogger } ]
+You have an HTML5 application that has a lot of pages. One of the pages, which takes user input, has a lot of text fields. Every time the user visits the page, he sees recommendations of the previous value entered in the same text box. You need to disable this behavior. Which attribute will allow you to disable this behavior?
+
+a. Autofill
+b. Recommended
+c. Autocomplete
+d. None of the mentioned
+c. Autocomplete
+You are working on a project which would suggest restaurants based on your location. Your client asks you the details about what information can be captured from the user's location. Please select all the properties captured from the user's location using HTML5 geolocation feature.
+
+NOTE: There can be multiple correct answers to this question.
+
+a. altitude
+b. altitudeAcuracy
+c. city
+d. state
+a. altitude
+b. altitudeAcuracy
+You are working on an application that utilizes session storage for storing data on the client-side. You open the same page on two different tabs of the same browser. Now, first, you perform an action on tab1 that changes the value in session storage. Then you move over to tab2 and perform an action that again changes the value in sesion storage. What wil be the output when you try to access the stored value in Tab 1?
+
+a. The value set in Tab 2 should be displayed.
+b. The value set in Tab 1 should stay as is.
+c. The value will not be visible in Tab 1, as Tab 2 has overridden the value in the browser and is not accessible in Tab 1 now
+d. None of the mentioned.
+b. The value set in Tab 1 should stay as is.
+You want to destructure an array into multiple variables. Which is the correct expression in ES6 to achieve the same?
+
+a. var foo = ['one', 'two', 'three'];
+var [one, two, three] = foo.one, foo.two, foo.three
+b. var foo = ['one', 'two', 'three'];
+var [one, two, three] = foo;
+c. var foo = ['one', 'two', 'three'];
+var [one, two, three] = foo[0], foo[1], foo[2]
+d. var foo = ['one', 'two', 'three'];
+var [one, two, three] = foo.one, foo.desctructure();
+b. var foo = ['one', 'two', 'three'];
+var [one, two, three] = foo;
+You are working on a program that has two arrays. You hve a requirement to merge these two arrays. Considering the latest feature offering in ES6, which is the most appropriate version of merging two arrays?
+
+a. var mergedArray = [array1, array2]
+b. var mergedArray = {array1, array2}
+c. var mergedArray = Array.merge(array1, array2)
+d. var mergedArray = [...array1, ...array2]
+d. var mergedArray = [...array1, ...array2]
+Which statements are true regarding Amazon Aurora?
+
+NOTE: There can be multiple correct answers to this question.
+
+a. It does not have better performance than MySQL
+b. Relational database engine that combines the reliability, speed, and availability of high-end commercial databases.
+c. it is MySQL compatible.
+d. It is available as a managed database service through Amazon Dynamo.
+b. Relational database engine that combines the reliability, speed, and availability of high-end commercial databases.
+c. it is MySQL compatible.
+An instance is connected to an ENI (Elastic Network Interface) in one subnet. What happens when you attach an ENI of a different subnet to this instance?
+
+a. The instance follows the rules of the older subnet.
+b. The instance follows the rules of both subnets.
+c. The instance follows the rules of the newer subnet.
+d. Not possible cannot be connected to 2 ENIs
+b. The instance follows the rules of both subnets.
+You are using a CloudFormation template to create one elastic lo0ad balancer and two EC2 instances.
+
+What section of the templates should be edited in order to return the DNS of the loadbalancer once the stack is created?
+
+a. Resources
+b. Parameters
+c. Outputs
+d. Mappings
+c. Outputs
+You have a requirement to host MongoDB instances. You need to select the correct type of storage to host the database. You are expecting a high load and want to ensure low latency too.
+
+What should be the underlying storage used?
+
+a. ProvisionedIOPS
+b. GeneralPurpose SSD
+c. Throughput Optimized SSD
+d. cold HDD
+a. ProvisionedIOPS
+You have to design the following application wherein you can use the application to upload images and videos, and then a worker process can pick the file for further processing.
+
+Which of the following AWS service is the most suitable for storing the images and videos?
+
+a. AWS simple storage
+b. AWS SNS
+c. AWS SQS
+d. AWS Glacier
+e. EBS Volumes
+a. AWS simple storage
+You have confidential documents that are uploaded in an S3 bucket. You need to ensure that the documents are not lost in case of any disaster.
+
+Which of the following services will you enable to accomplish the above task?
+
+a. Enable multi-AZ replication
+b. Enable cross-region replication.
+c. Use the AWS CLI copy to copy the content to another S3 bucket in a different availability zone.
+d. Enable S3 object lock
+b. Enable cross-region replication.
+What is the basic structure of the pom.xml file generated by maven for the SigMap project?
+
+a.
+<project>
+<modelVersion>4.0.0</modelVersion>
+<groupId>geodata</groupId>
+<artifactId>SigMap</artifactId>
+<version>1.0</version>
+</project>
+
+b.
+<maven>
+<model>4.0.0</model>
+<package>geodata</package>
+<project>SigMap</project>
+<version>1.0</version>
+</maven>
+
+c.
+<maven>
+<modelVersion>4.0.0</modelVersion>
+<group>geodata</group>
+<artifact>SigMap</artifact>
+<release>1.0</release>
+</maven>
+
+d.
+<project>
+<versionModel>4.0.0</versionModel>
+<group>geodata</group>
+<artifact>SigMap</artifact>
+<release>1.0</release>
+</project>
+a.
+<project>
+<modelVersion>4.0.0</modelVersion>
+<groupId>geodata</groupId>
+<artifactId>SigMap</artifactId>
+<version>1.0</version>
+</project>
+The Maven build is based on the lifecycle concept: the process of building and distributing your application is divided into well-defined parts called phases, following a cycle. What are the phases of this cycle?
+
+a.
+compile
+build
+package
+test
+deploy
+
+b.
+compile
+test
+package
+integration-test
+install
+deploy
+
+c.
+check-dependancies
+test
+compile
+build
+deploy
+install
+
+d.
+compile
+build
+test
+deploy
+run
+
+b.
+
+
+1. What is a Database?
+A database is a collection of information in an organized form for faster and better access, storage and manipulation. It can also be defined as a collection of tables, schema, views and other database objects.
+What is Database Testing?
+It is back-end testing or data testing.Database testing involves in verifying the integrity of data in the front end with the data present in the back end. It validates the schema, database tables, columns, indexes, stored procedures, triggers, data duplication, orphan records, junk records. It involves in updating records in a database and verifying the same on the front end.
+
+
+
+00:21
+
+04:00
+3. What is the difference between GUI Testing and Database Testing?
+GUI Testing is AKA User Interface Testing or Front-end testing.Database Testing is AKA back-end testing or data testing.GUI Testing deals with all the testable items that are open to the user to interaction such as Menus, Forms etc.Database Testing deals with all the testable items that are generally hidden from the user.The tester who is performing GUI Testing doesn't need to know Structured Query Language.GUI Testing includes invalidating the text boxes, check boxes, buttons, drop-downs, forms etc., majorly the look and feel of the overall application.Database Testing involves in verifying the integrity of data in the front end with the data present in the back end. It validates the schema, database tables, columns, indexes, stored procedures, triggers, data duplication, orphan records, junk records. It involves in updating records in a database and verifying the same on the front end.
+4. What is a Table in a Database?
+A table is a database object used to store data in a field in the form of columns and rows that holds the records.
+5. What is a Field in a Database?
+A field in a Database table is a space allocated to store a particular record within a table.
+What is a Record in a Database?
+A record (also called a row of data) is an ordered set of related data in a table.
+What is a column in a Table?
+A column is a vertical entity in a table that contains all information associated with a specific field in a table.
+8. What is DBMS?
+Database Management System is a collection of programs that enables a user to store, retrieve, update and delete information from a database.
+9. What is RDBMS?
+RDBMS stands for Relational Database Management System. RDBMS is a database management system (DBMS) that is based on the relational model. Data from relational database can be accessed using Structured Query Language (SQL)
+What are the popular Database Management Systems in the IT Industry?
+Oracle, MySQL, Microsoft SQL Server, PostgreSQL, Sybase, MongoDB, DB2, and Microsoft Access etc.,
+11. What is SQL?
+SQL Overview: SQL stands for Structured Query Language. It is an American National Standard Institute (ANSI) standard. It is a standard language for accessing and manipulating databases. Using SQL, some of the action we could do are to create databases, tables, stored procedures (SP's), execute queries, retrieve, insert, update, delete data against a database.
+12. What are the different types of SQL commands?
+SQL commands are segregated into following types: DDL - Data Definition Language
+DML- Data Manipulation language
+DCL- Data Control Language
+13. What are the different DDL commands in SQL?
+DDL commands are used to define or alter the structure of the database.CREATE: To create databases and database objects. ALTER: To alter existing database objects.DROP: To drop databases and databases objects.TRUNCATE: To remove all records from a table but not its database structure.RENAME: To rename database objects
+14. What are the different DML commands in SQL?
+DML commands are used for managing data present in the database.SELECT: To select specific data from a database.INSERT: To insert new records into a table.UPDATE: To update existing records.DELETE: To delete existing records from a table
+DCL commands
+DCL commands are used to create roles, grant permission and control access to the database objects.GRANT: To provide user access
+DENY: To deny permissions to users
+REVOKE: To remove user access
+17. What is an Index?
+An index is used to speed up the performance of queries. It makes faster retrieval of data from the table. The index can be created on one column or a group of columns. Create index_IX tblEmpl_salary on tblEmpl(Salary ASC)
+20. What is a Subquery ?
+A Subquery is a SQL query within another query. It is a subset of a Select statement whose return values are used in filtering the conditions of the main query.
+SELECT *
+FROM CUSTOMERS
+WHERE ID IN (SELECT ID
+FROM CUSTOMERS
+WHERE SALARY > 4500) ;
+How to avoid duplicate records in a query?
+The SQL SELECT DISTINCT query is used to return only unique values. It eliminates all the duplicate values.
+SQL> SELECT DISTINCT SALARY FROM CUSTOMERS
+ORDER BY SALARY;
+23. What is the difference between Rename and Alias?
+'Rename' is a permanent name given to a table or column.'Alias' is a temporary name given to a table or column.
+What is a Join?
+Join is a query, which retrieves RELATED columns or rows from multiple tables.
+25. What are the different types of joins?
+Inner join,Outer Join,Right Join,Left join,
+What is the difference between an inner and outer join?
+An inner join returns rows when there is at least some matching data between two (or more) tables that are being compared(only shows intersecting data between two table)
+An outer join returns rows from both tables that include the records that are matched and unmatched( put it as null value) from one or both the tables.
+27. What are SQL constraints?
+SQL constraints are the set of rules that enforced some restriction while inserting, deleting or updating of data in the databases.
+28. What are the constraints available in SQL?
+Some of the constraints in SQL are - Primary Key, Foreign Key, Unique Key, SQL Not Null, Default, Check and Index constraint.
+29. What is a Unique constraint?
+A unique constraint is used to ensure that there are no duplication values in the field/column.
+What is a Primary Key?
+The PRIMARY KEY constraint uniquely identifies each record in a database table.
+
+Primary keys must contain UNIQUE values, and cannot contain NULL values.
+
+A table can have only one primary key, which may consist of single or multiple fields.
+Can a table contain multiple PRIMARY KEY's?
+No There can only be one primary key in each table.A primary key is a field in a table which uniquely identifies each row/record in a database table. All columns participating in a primary key constraint must not contain NULL values.
+What is a Composite PRIMARY KEY?
+Composite key, or composite primary key, refers to cases where more than one column is used to specify the primary key of a table. In such cases, all foreign keys will also need to include all the columns in the composite key. Note that the columns that make up a composite key can be of different data types.
+Oracle
+CREATE TABLE SAMPLE_TABLE
+(COL1 integer,
+COL2 varchar(30),
+COL3 varchar(50),
+PRIMARY KEY (COL1, COL2));
+What is a FOREIGN KEY?
+A FOREIGN KEY is a key used to link two tables together. A FOREIGN KEY in a table is linked with the PRIMARY KEY of another table.
+Can a table contain multiple FOREIGN KEY's?
+A table can have many FOREIGN KEY's.
+What is the difference between UNIQUE and PRIMARY KEY constraints?
+There should be only one PRIMARY KEY in a table whereas there can be any number of UNIQUE Keys.PRIMARY KEY doesn't allow NULL values whereas Unique key allows NULL values.
+What is a NULL value?
+A field with a NULL value is a field with no value. A NULL value is different from a zero value or a field that contains spaces. A field with a NULL value is one that has been left blank during record creation. Assume, there is a field in a table is optional and it is possible to insert a record without adding a value to the optional field then the field will be saved with a NULL value.
+What is the difference between NULL value, Zero, and Blank space?
+As I mentioned earlier, Null value is field with no value which is different from zero value and blank space.Null value is a field with no value.Zero is a number.Blank space is the value we provide. The ASCII value of space is CHAR(32).
+How to Test for NULL Values?
+SELECT column_names FROM table_name WHERE column_name IS NULL;
+What is a CHECK constraint?
+A CHECK constraint is used to limit the value that is accepted by one or more columns.
+E.g. 'Age' field should contain only the value greater than 18.
+CREATE TABLE EMP_DETAILS(EmpID int NOT NULL, NAME VARCHAR (30) NOT NULL, Age INT CHECK (AGE &gt; 18), PRIMARY KEY (EmpID));
+What is a DEFAULT constraint?
+DEFAULT constraint is used to include a default value in a column when no value is supplied at the time of inserting a record.
+What is Normalization?
+Normalization is the process of efficiently organizing data in a database by eliminating redundant data and ensuring the data dependency. (only storing related data in a table)
+What is Stored procedure?
+A Stored Procedure is a collection of SQL statements that have been created and stored in the database to perform a particular task.
+A program written in the database , when required you invoke the store procedure.
+What is a Trigger?
+A Trigger is a SQL procedure that initiates an action in response to an event (Insert, Delete or Update) occurs. When a new Employee is added to an Employee_Details table, new records will be created in the relevant tables such as Employee_Payroll, Employee_Time_Sheet etc.,
+45. Explain SQL Data Types?
+In SQL Server, each column in a database table has a name and a data type. We need to decide what type of data to store inside each and every column of a table while creating a SQL table.eg. char, varchar, numbers,etc..
+46. What are the possible values that can be stored in a BOOLEANdata field?
+TRUE and FALSE
+What is the largest value that can be stored in a BYTE data field?
+The largest number that can be represented in a single byte is 11111111 or 255. The number of possible values is 256 (i.e. 255 (the largest possible value) plus 1 (zero), or 28).
+What are Operators available in SQL?
+Arithmetic Operators(+, -, /, *, %)
+Comparison Operators( >, =, <, <>, <=, >=)
+Logical Operators(All, And, Any, Between, IN, Like, not, or , some)
+Compound Operators(+=, -=, ..)
+Bitwise Operators(Bitwise AND, Bitwise OR, Bitwise Exclusive OR)
+Which TCP/IP port does SQL Server run?
+By default it is 1433
+List out the ACID properties and explain?
+Following are the four properties of ACID. These guarantees that the database transactions are processed reliably. Atomicity, Consistency, Isolation, and Durability
+51. Define the SELECT INTO statement.
+The SELECT INTO statement copies data from one table into a new table. The new table will be created with the column-names and types as defined in the old table. You can create new column names using the AS clause
+SELECT * INTO newtable FROM oldtable WHERE condition;
+What is the difference between Union and Union All command?
+Both Union and Union All concatenate the result of two tables
+Union: It omits duplicate records and returns only distinct result set of two or more select statements.
+Union All: It returns all the rows including duplicates in the result set of different select statements.
+What is the difference between Having and Where clause?
+Where clause is used to fetch data from a database that specifies particular criteria whereas a Having clause is used along with 'GROUP BY' to fetch data that meets particular criteria specified by the Aggregate functions. Where clause cannot be used with Aggregate functions, but the Having clause can. eg: SELECT column name FROM table name WHERE condition GROUP BY columns names HAVING condition ORDER BY column names
+SELECT Department_id, SUM (salary)from employees WHERE department_id HAVING sum (salary)>20000 ORDER BY sum(salary);
+56. What are aggregate functions in SQL?
+SQL aggregate functions return a single value, calculated from multiple values in a column. Some of the aggregate functions in SQL are as follows
+AVG() - This function returns the average value
+COUNT() - This function returns the number of rows
+MAX() - This function returns the largest value
+MIN() - This function returns the smallest value
+ROUND() - This function rounds a numeric field to the number of decimals specified
+SUM() - This function returns the sum
+57. What are string functions in SQL?
+SQL string functions are used primarily for string manipulation. Some of the widely used SQL string functions are
+LEN() - It returns the length of the value in a text field
+LOWER() - It converts character data to lower case
+UPPER() - It converts character data to upper case
+SUBSTRING() - It extracts characters from a text field
+LTRIM() - It is to remove all whitespace from the beginning of the string
+RTRIM() - It is to remove all whitespace at the end of the string
+CONCAT() - Concatenate function combines multiple character strings together
+REPLACE() - To update the content of a string.
+How to add new Employee details in an Employee_Details table with the following details
+Employee_Name: John, Salary: 5500, Age: 29?
+INSERT into Employee_Details (Employee_Name, Salary, Age) VALUES ('John', 5500 , 29);
+59. How to add a column 'Salary' to a table Employee_Details?
+ALTER TABLE Employee_Details ADD (Salary);
+How to change a value of the field 'Salary' as 7500 for an Employee_Name 'John' in a table Employee_Details?
+UPDATE Employee_Details set Salary = 7500 where Employee_Name = 'John';
+Write an SQL Query to select all records from the table?
+Select * from table_name;
+GROUP BY clause
+The clause that groups rows based on the specified column. group by returns one records for each group. count, min , max, sum , avg
+SELECT department _ID sum(salary)from employes group by department_ID.
+HAVING clause
+to filter the results grouped by a GROUP BY clause. Can only reference aggregate functions or column that are also specified in the GROUP BY clause.
+Where-----Group By-----Having
+SELECT dept_id, SUM(Salary)from emp WHERE dept_id <>50 GROUP BY dept_Id having sum (salary)>10000.
+Write the command to remove all Players named Sachin from the Players table.
+DELETE from Players WHERE Player_Name = 'Sachin'
+How to fetch values from TestTable1 that are not in TestTable2 without using NOT keyword?
+By using the EXCEPT keyword
+SELECT FROM TestTable1 EXCEPT SELECT FROM TestTable2;
+How to get each name only once from an employee table?
+By using the DISTINCT keyword, we could get each name only once.
+SELECT DISTINCT employee_name FROM employee_table;
+How to rename a column in the output of SQL query?
+By using AS keyword
+SELECT column_name AS new_name FROM table_name;
+What is the order of SQL SELECT?
+Order of SQL SELECT statement is as follows
+SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY.
+How to display the current date in SQL.
+SELECT GetDate();
+Write an SQL Query to find an Employee_Name whose Salary is equal or greater than 5000 from the below table Employee_Details.
+SELECT Employee_Name FROM Employee_Details WHERE Salary>=5000;
+Write an SQL Query to find list of Employee_Name start with 'E' from the below table
+SELECT * FROM Employee_Details WHERE Employee_Name like 'E%';
+Write SQL SELECT query that returns the FirstName and LastName from Employee_Details table.
+SELECT FirstName, LastName FROM Employee_Details;
+How to rename a Table?
+SP_RENAME TABLE 'SCOREBOARD', 'OVERALLSCORE'
+To rename Table Name & Column Name
+sp_rename 'TableName.OldColumnName', 'NewColumnName'
+How to select all the even number records from a table?
+Select * from table where id % 2 = 0
+How to select all the odd number records from a table?
+Select * from table where id % 2 != 0
+What is the SQL CASE statement?
+SQL Case statement allows embedding an if-else like clause in the SELECT statement
+Describe SQL comments?
+Single Line Comments: Single line comments start with two consecutive hyphens (-) and ended by the end of the line
+Multi-Line Comments: Multi-line comments start with / and end with /. Any text between / and / will be ignored.
+How to get unique records from a table?
+By using DISTINCT keyword.
+SELECT DISTINCT Col1, Col2 from Table1
+Which operator is used in query for pattern matching?
+It is called wild card character.LIKE operator is used for pattern matching, and it can be used as -.
+% - Matches zero or more characters.
+_(Underscore) - Matching exactly one character.
+MySQL
+
+Select * from Student where studentname like 'a%'
+1
+Select * from Student where studentname like 'amk_'
+What is Auto increment?
+Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.
+
+Often this is the primary key field that we would like to be created automatically every time a new record is inserted.
+
+ID int NOT NULL AUTO_INCREMENT,
+What is a database Schema
+It is a diagramatically, visually and graphically represent a database.Particularly a relational database. It is an ERD.
+Wild card and light keyword in database?
+way of defining a pattern that we want to match a specific pattern. eg; find any client who are in llc. SELECT * from client where client_name LIKE '% llc'; % is any number of character._ represents on character.
+What is CRUD operations?
+CRUD represents an acronym for the database operations Create, Read, Update, and Delete. The communication between two layers could be in the form of ad hoc SQL statements such as INSERT, SELECT, UPDATE, and DELETE.
+what is sql join ?
+Join helps retrieving data from two or more table when there is a common column in between them. In the other hand they are mutually related using primary key and foreign key.
+SELECT table1 , SELECT table2
+
+SELECT * from Emplyoee INNER JOIN Salary on Emplyoee.name=Salary.name;
