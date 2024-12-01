@@ -1,0 +1,117 @@
+using Microsoft.AspNetCore.Mvc;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
+using System.Data;
+using Microsoft.Data.SqlClient;
+
+[Route("api/[controller]")]
+[ApiController]
+public class DataExportController : ControllerBase
+{
+    private readonly IConfiguration _configuration;
+
+    public DataExportController(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
+    [HttpGet("download-large-dataset")]
+    public async Task<IActionResult> DownloadLargeDataset()
+    {
+        // Set response headers
+        Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+        Response.Headers.Add("Content-Disposition", "attachment; filename=LargeDataset.xlsx");
+
+        // Initialize Excel workbook and sheet
+        using var workbook = new XSSFWorkbook();
+        var sheet = workbook.CreateSheet("Dataset");
+
+        // Add header row
+        var headerRow = sheet.CreateRow(0);
+        headerRow.CreateCell(0).SetCellValue("Id");
+        headerRow.CreateCell(1).SetCellValue("Name");
+        headerRow.CreateCell(2).SetCellValue("Value");
+
+        // Write data row by row
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+        {
+            await connection.OpenAsync();
+            using (var command = new SqlCommand("YourStoredProcedureName", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    int rowIndex = 1; // Start from row 1 (0 is the header)
+
+                    while (await reader.ReadAsync())
+                    {
+                        var row = sheet.CreateRow(rowIndex++);
+                        row.CreateCell(0).SetCellValue(reader.GetInt32(0)); // Assuming 1st column is int
+                        row.CreateCell(1).SetCellValue(reader.GetString(1)); // Assuming 2nd column is string
+                        row.CreateCell(2).SetCellValue(reader.GetString(2)); // Assuming 3rd column is string
+
+                        // Flush rows in chunks to avoid memory issues
+                        if (rowIndex % 1000 == 0)
+                        {
+                            await Response.Body.FlushAsync();
+                        }
+                    }
+                }
+            }
+        }
+
+        // Write workbook to response stream
+        using (var memoryStream = new MemoryStream())
+        {
+            workbook.Write(memoryStream);
+            memoryStream.Position = 0;
+            await memoryStream.CopyToAsync(Response.Body);
+        }
+
+        return new EmptyResult();
+    }
+}
+
+import React, { useState } from "react";
+
+const DownloadButton = () => {
+    const [progress, setProgress] = useState(0);
+
+    const downloadFile = async () => {
+        const response = await fetch("/api/dataexport/download-large-dataset");
+        const reader = response.body.getReader();
+        const contentLength = +response.headers.get("Content-Length");
+
+        let receivedLength = 0;
+        const chunks = [];
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            chunks.push(value);
+            receivedLength += value.length;
+
+            // Update progress percentage
+            setProgress(Math.floor((receivedLength / contentLength) * 100));
+        }
+
+        // Combine chunks into a blob and download
+        const blob = new Blob(chunks);
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "LargeDataset.xlsx";
+        a.click();
+    };
+
+    return (
+        <div>
+            <button onClick={downloadFile}>Download Excel</button>
+            {progress > 0 && <p>Progress: {progress}%</p>}
+        </div>
+    );
+};
+
+export default DownloadButton;
